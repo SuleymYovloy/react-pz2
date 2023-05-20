@@ -16,7 +16,11 @@ function Categories() {
           Все
         </li> */}
         {categories.map((value, i) => (
-          <li onClick={() => onClickCategory(i)} className={activeIndex === i ? 'active' : ''}>
+          <li
+            key={value}
+            onClick={() => onClickCategory(i)}
+            className={activeIndex === i ? 'active' : ''}
+          >
             {value}
           </li>
         ))}
